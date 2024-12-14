@@ -16,11 +16,34 @@
             font-family: 'Roboto', sans-serif;
             min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background-color: #f4f4f9;
             color: #333;
-            overflow: hidden;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -36,7 +59,6 @@
             background-size: cover;
             background-position: center;
             min-height: 100%;
-            display: block;
         }
 
         .content-section {
@@ -52,6 +74,7 @@
 
         .content-wrapper {
             max-width: 800px;
+            margin: auto;
         }
 
         h1 {
@@ -63,11 +86,16 @@
         p {
             font-size: 1.2rem;
             line-height: 1.8;
-            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .spacer {
-            height: 2rem;
+        .contact-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Responsive Design */
@@ -77,44 +105,34 @@
             }
 
             .photo-section {
-                display: none;
+                height: 50vh;
             }
 
-            .content-section {
-                padding: 1.5rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            p {
+            .navbar {
                 font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
+
     <div class="container">
         <div class="photo-section"></div>
         <div class="content-section">
             <div class="content-wrapper">
-                <h1>About Me</h1>
-                <div class="spacer"></div>
+                <h1>Caleb McMillann</h1>
                 <p>
                     <!-- Replace this placeholder with your About Me content -->
-                    Welcome to my personal site! I'm Caleb McMillan, a technical writer, content creator, and lifelong learner. Explore my portfolio and get to know more about my journey.
+                    A white paper author, technical writer, content creator, and Frank Zappa enthusiast. Explore my portfolio and contact me for a quote.
                 </p>
+                <div class="contact-box">
+                    <!-- Add your contact information here -->
+                    <p>Contact me at: calebmcmillan@gmail.com</p>
+                </div>
             </div>
         </div>
     </div>
