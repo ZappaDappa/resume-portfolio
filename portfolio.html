@@ -46,27 +46,42 @@
             text-decoration: underline;
         }
 
-        .carousel {
+        .carousel-container {
             position: relative;
             width: 100%;
             max-width: 800px;
-            overflow: hidden;
             margin: 2rem auto;
+            perspective: 1000px; /* Creates the 3D effect */
         }
 
-        .carousel-track {
+        .carousel {
             display: flex;
-            transition: transform 0.5s ease;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 1s ease;
         }
 
-        .carousel-slide {
-            min-width: 100%;
+        .carousel-item {
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center;
+            backface-visibility: hidden;
         }
 
-        .carousel-slide img {
+        .carousel-item img {
             width: 100%;
-            display: block;
+            height: 100%;
+            border-radius: 8px;
         }
 
         .carousel-buttons {
@@ -84,7 +99,6 @@
             font-size: 2rem;
             color: #333;
             cursor: pointer;
-            padding: 0.5rem;
         }
 
         .carousel-buttons button:hover {
@@ -97,17 +111,6 @@
             font-size: 0.9rem;
             color: #666;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar {
-                font-size: 0.9rem;
-            }
-
-            .carousel {
-                max-width: 90%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -116,15 +119,15 @@
         <a href="portfolio.html">Portfolio</a>
     </div>
 
-    <div class="carousel">
-        <div class="carousel-track">
-            <div class="carousel-slide">
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
                 <img src="path-to-pdf-cover1.jpg" alt="PDF Cover 1">
             </div>
-            <div class="carousel-slide">
+            <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
                 <img src="path-to-pdf-cover2.jpg" alt="PDF Cover 2">
             </div>
-            <div class="carousel-slide">
+            <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
                 <img src="path-to-pdf-cover3.jpg" alt="PDF Cover 3">
             </div>
         </div>
@@ -139,29 +142,19 @@
     </div>
 
     <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.getElementById('next');
-        const prevButton = document.getElementById('prev');
-        let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+        const items = Array.from(carousel.children);
+        let currentAngle = 0;
 
-        function updateCarousel(index) {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-        }
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel(currentIndex);
+        document.getElementById('next').addEventListener('click', () => {
+            currentAngle -= 120;
+            carousel.style.transform = `rotateY(${currentAngle}deg)`;
         });
 
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel(currentIndex);
+        document.getElementById('prev').addEventListener('click', () => {
+            currentAngle += 120;
+            carousel.style.transform = `rotateY(${currentAngle}deg)`;
         });
-
-        // Ensure responsiveness
-        window.addEventListener('resize', () => updateCarousel(currentIndex));
     </script>
 </body>
 </html>
