@@ -20,6 +20,7 @@
             align-items: center;
             background-color: #f4f4f9;
             color: #333;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         .navbar {
@@ -50,7 +51,7 @@
             position: relative;
             width: 100%;
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 6rem auto 4rem auto; /* Adds margin to move the carousel further down */
             perspective: 1000px; /* Creates the 3D effect */
         }
 
@@ -105,16 +106,6 @@
             color: #000;
         }
 
-        .footer {
-            margin-top: auto; /* Ensures footer stays at the bottom */
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            padding: 1rem;
-            width: 100%;
-            background-color: #f4f4f9;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .navbar {
@@ -123,17 +114,15 @@
 
             .carousel-container {
                 max-width: 90%;
-                margin-bottom: 5rem; /* Adds space for footer */
+                margin: 8rem auto 5rem auto; /* Adds extra space for navigation and images */
             }
 
-            .footer {
-                margin-top: 2rem;
+            .carousel-item {
+                height: 250px; /* Scales down for smaller screens */
             }
-        }
 
-        @media (min-width: 769px) {
-            .carousel-container {
-                margin-bottom: 5rem; /* Adds space for footer on larger screens */
+            .carousel-item img {
+                height: 100%;
             }
         }
     </style>
@@ -147,15 +136,13 @@
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
-                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png
-                " alt="PDF Cover 1">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
             </div>
             <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
-                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png
-                " alt="PDF Cover 2">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png" alt="Meat the Future">
             </div>
             <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
-                <img src="path-to-pdf-cover3.jpg" alt="PDF Cover 3">
+                <img src="path-to-third-image.jpg" alt="Placeholder for Third PDF">
             </div>
         </div>
         <div class="carousel-buttons">
@@ -163,7 +150,6 @@
             <button id="next">&#9654;</button>
         </div>
     </div>
-
 
     <script>
         const carousel = document.querySelector('.carousel');
