@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Caleb McMillan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -39,7 +39,6 @@
             color: #fff;
             margin: 0 1rem;
             font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
         }
 
         .navbar a:hover {
@@ -55,7 +54,7 @@
 
         .photo-section {
             flex: 1;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG'); /* Replace with your photo URL */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG');
             background-size: cover;
             background-position: center;
             min-height: 100%;
@@ -96,17 +95,20 @@
         }
 
         .footer {
-            margin-top: 2rem;
+            margin-top: auto;
             text-align: center;
             font-size: 0.9rem;
             color: #666;
             padding: 1rem;
+            width: 100%;
+            background-color: #f4f4f9;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                padding-bottom: 5rem; /* Ensures space for the footer */
             }
 
             .photo-section {
@@ -116,7 +118,7 @@
 
             .content-section {
                 order: 2;
-                margin-bottom: 2rem; /* Adds spacing below the body text */
+                margin-bottom: 2rem;
             }
 
             .footer {
@@ -127,7 +129,7 @@
 
         @media (min-width: 769px) {
             .container {
-                justify-content: flex-end; /* Aligns content towards the right */
+                justify-content: flex-end;
             }
         }
     </style>
