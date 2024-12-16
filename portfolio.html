@@ -124,6 +124,14 @@
             border-radius: 8px;
         }
 
+        .carousel-item a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
         .carousel-buttons {
             position: absolute;
             top: 50%;
@@ -157,6 +165,11 @@
             }
 
             .carousel-container {
+                order: 2;
+                margin-top: 1.5rem;
+            }
+
+            .content-text h2 {
                 margin-top: 2rem;
             }
         }
@@ -179,11 +192,36 @@
                 <li><strong>Application Papers:</strong> Showcase practical use cases for products or technologies.</li>
                 <li><strong>Planning Guides:</strong> Provide actionable steps to adopt new technologies or adapt to industry changes.</li>
             </ul>
+        </div>
+
+        <!-- Carousel is positioned between "White Papers" and "Marketing Collateral" on mobile -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
+                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
+                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">Solving Addiction Completely</a>
+                </div>
+                <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
+                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png" alt="Meat the Future">
+                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Meat%20the%20Future.pdf" target="_blank">Meat the Future</a>
+                </div>
+                <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
+                    <img src="path-to-third-image.jpg" alt="Placeholder for Third PDF">
+                    <a href="#" target="_blank">Third PDF Name</a>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev">&#9664;</button>
+                <button id="next">&#9654;</button>
+            </div>
+        </div>
+
+        <div class="content-text">
             <h2>Marketing Collateral</h2>
             <p>Marketing collateral supports your business objectives by targeting key audiences with persuasive, informative content. Services include:</p>
             <ul>
                 <li><strong>Corporate Brochures:</strong> Showcase your company’s vision, mission, and solutions.</li>
-                <li><strong>Product Brochures:</strong> Highlight your products' or services' benefits and unique features.</li>
+                <li><strong>Product Brochures:</strong> Highlight the benefits and unique features of your products or services.</li>
                 <li><strong>Case Studies/Success Stories:</strong> Demonstrate real-world benefits and implementation of your products or services.</li>
                 <li><strong>FAQs:</strong> Provide clear, concise answers to common customer questions.</li>
                 <li><strong>Newsletters:</strong> Share updates, milestones, and stories to keep audiences engaged.</li>
@@ -202,27 +240,6 @@
                 <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
                 <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
             </ul>
-        </div>
-
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
-                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">Download PDF</a>
-                </div>
-                <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png" alt="Meat the Future">
-                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Meat%20the%20Future.pdf" target="_blank">Download PDF</a>
-                </div>
-                <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
-                    <img src="path-to-third-image.jpg" alt="Placeholder for Third PDF">
-                    <a href="#" target="_blank">Download PDF</a>
-                </div>
-            </div>
-            <div class="carousel-buttons">
-                <button id="prev">&#9664;</button>
-                <button id="next">&#9654;</button>
-            </div>
         </div>
     </div>
 
