@@ -54,7 +54,7 @@
 
         .photo-section {
             flex: 1;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG');
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG'); /* Replace with your photo URL */
             background-size: cover;
             background-position: center;
             min-height: 100%;
@@ -67,6 +67,11 @@
             justify-content: center;
             text-align: center;
             padding: 3rem 2rem;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: auto;
         }
 
         h1 {
@@ -92,44 +97,45 @@
             margin-left: auto;
             margin-right: auto;
             color: #333;
+            text-align: center;
+        }
+
+        .contact-box a {
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .contact-box img {
+            width: 32px;
+            height: 32px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
         }
 
         .footer {
-            margin-top: auto;
+            margin-top: 2rem;
             text-align: center;
             font-size: 0.9rem;
             color: #666;
             padding: 1rem;
-            width: 100%;
-            background-color: #f4f4f9;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                padding-bottom: 5rem; /* Ensures space for the footer */
             }
 
             .photo-section {
                 height: 50vh;
-                order: 1;
             }
 
-            .content-section {
-                order: 2;
-                margin-bottom: 2rem;
+            .navbar {
+                font-size: 0.9rem;
             }
 
-            .footer {
-                order: 3;
-                margin-top: 1rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .container {
-                justify-content: flex-end;
+            .contact-box {
+                max-width: 90%;
             }
         }
     </style>
@@ -150,10 +156,24 @@
                 </p>
                 <div class="contact-box">
                     <p>Contact me for a quote: calebmcmillan@gmail.com</p>
+                    <div>
+                        <a href="#" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="footer">
+        <p>Copyright 2024, All Rights Reserved. Site created from scratch in Visual Studio Code.</p>
+    </div>
 </body>
 </html>
