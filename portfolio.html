@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Caleb McMillan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,13 +14,9 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f4f4f9;
+            line-height: 1.6;
             color: #333;
-            overflow-x: hidden; /* Prevents horizontal scrolling */
+            background-color: #f4f4f9;
         }
 
         .navbar {
@@ -40,35 +36,60 @@
             color: #fff;
             margin: 0 1rem;
             font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
         }
 
         .navbar a:hover {
             text-decoration: underline;
         }
 
-        .content-section {
-            text-align: center;
-            margin-top: 3rem;
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
 
-        .content-section h1 {
-            font-family: 'Patrick Hand SC', cursive;
-            font-size: 3rem;
+        .content-text {
+            flex: 2;
+            min-width: 300px;
+            margin-right: 2rem;
+        }
+
+        .content-text h1 {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .content-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        .content-text h2 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-text p, .content-text ul {
+            margin-bottom: 1rem;
+        }
+
+        .content-text ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .content-text ul li::before {
+            content: '\2022';
+            color: #007BFF;
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
         }
 
         .carousel-container {
+            flex: 1;
+            max-width: 400px;
             position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 2rem auto 4rem auto; /* Centers the carousel further down */
-            perspective: 1000px; /* Creates the 3D effect */
+            margin: auto;
+            perspective: 1000px;
         }
 
         .carousel {
@@ -103,18 +124,6 @@
             border-radius: 8px;
         }
 
-        .carousel-item a {
-            margin-top: 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        .carousel-item a:hover {
-            color: #007BFF;
-        }
-
         .carousel-buttons {
             position: absolute;
             top: 50%;
@@ -138,21 +147,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .navbar {
-                font-size: 0.9rem;
+            .content-wrapper {
+                flex-direction: column;
+                margin: 1rem auto;
+            }
+
+            .content-text {
+                margin-right: 0;
             }
 
             .carousel-container {
-                max-width: 90%;
-                margin: 12rem auto 5rem auto; /* Centers carousel on smaller screens */
-            }
-
-            .carousel-item {
-                height: 250px; /* Scales down for smaller screens */
-            }
-
-            .carousel-item img {
-                height: 150px;
+                margin-top: 2rem;
             }
         }
     </style>
@@ -163,29 +168,61 @@
         <a href="portfolio.html">Portfolio</a>
     </div>
 
-    <div class="content-section">
-        <h1>Portfolio</h1>
-        <p>These are the white papers I've written.</p>
-    </div>
-
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
-                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
-                <a href="https://github.com/ZappaDappa/website-assets/blob/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">Download PDF</a>
-            </div>
-            <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
-                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png" alt="Meat the Future">
-                <a href="https://github.com/ZappaDappa/website-assets/blob/main/Meat%20the%20Future.pdf" target="_blank">Download PDF</a>
-            </div>
-            <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
-                <img src="path-to-third-image.jpg" alt="Placeholder for Third PDF">
-                <a href="#" target="_blank">Download PDF</a>
-            </div>
+    <div class="content-wrapper">
+        <div class="content-text">
+            <h1>Content Writing and Technical Documentation Services</h1>
+            <h2>White Papers</h2>
+            <p>White papers are authoritative, detailed documents designed to educate readers and help them make decisions. They are a key resource for establishing expertise, generating leads, and supporting sales efforts. I specialize in creating the following types of white papers:</p>
+            <ul>
+                <li><strong>Technology White Papers:</strong> Explain complex technologies clearly.</li>
+                <li><strong>Industry Trend Analysis:</strong> Highlight current trends, market challenges, and opportunities.</li>
+                <li><strong>Application Papers:</strong> Showcase practical use cases for products or technologies.</li>
+                <li><strong>Planning Guides:</strong> Provide actionable steps to adopt new technologies or adapt to industry changes.</li>
+            </ul>
+            <h2>Marketing Collateral</h2>
+            <p>Marketing collateral supports your business objectives by targeting key audiences with persuasive, informative content. Services include:</p>
+            <ul>
+                <li><strong>Corporate Brochures:</strong> Showcase your company’s vision, mission, and solutions.</li>
+                <li><strong>Product Brochures:</strong> Highlight the benefits and unique features of your products or services.</li>
+                <li><strong>Case Studies/Success Stories:</strong> Demonstrate real-world benefits and implementation of your products or services.</li>
+                <li><strong>FAQs:</strong> Provide clear, concise answers to common customer questions.</li>
+                <li><strong>Newsletters:</strong> Share updates, milestones, and stories to keep audiences engaged.</li>
+                <li><strong>Data Sheets:</strong> Deliver operational and technical specifications for products.</li>
+            </ul>
+            <h2>Presentation and Outreach Materials</h2>
+            <p>Tailored content for corporate and sales presentations, designed to captivate your audience and drive engagement:</p>
+            <ul>
+                <li><strong>Sales Kits:</strong> Equip your sales team with all the necessary materials to close deals effectively.</li>
+                <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
+                <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
+            </ul>
+            <h2>Additional Services</h2>
+            <ul>
+                <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
+                <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
+                <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
+            </ul>
         </div>
-        <div class="carousel-buttons">
-            <button id="prev">&#9664;</button>
-            <button id="next">&#9654;</button>
+
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
+                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
+                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">Download PDF</a>
+                </div>
+                <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px);">
+                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/refs/heads/main/MeattheFuture.png" alt="Meat the Future">
+                    <a href="https://github.com/ZappaDappa/website-assets/blob/main/Meat%20the%20Future.pdf" target="_blank">Download PDF</a>
+                </div>
+                <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px);">
+                    <img src="path-to-third-image.jpg" alt="Placeholder for Third PDF">
+                    <a href="#" target="_blank">Download PDF</a>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev">&#9664;</button>
+                <button id="next">&#9654;</button>
+            </div>
         </div>
     </div>
 
