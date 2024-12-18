@@ -166,11 +166,17 @@
 
             .carousel-container {
                 order: 2;
-                margin-top: 1.5rem;
+                margin: 2rem auto; /* Ensures proper spacing */
             }
 
             .content-text h2 {
                 margin-top: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .carousel-container {
+                margin: auto 0; /* Centers vertically on desktop */
             }
         }
     </style>
@@ -194,7 +200,6 @@
             </ul>
         </div>
 
-        <!-- Carousel is positioned between "White Papers" and "Marketing Collateral" on mobile -->
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px);">
@@ -231,32 +236,33 @@
             <p>Tailored content for corporate and sales presentations, designed to captivate your audience and drive engagement:</p>
             <ul>
                 <li><strong>Sales Kits:</strong> Equip your sales team with all the necessary materials to close deals effectively.</li>
-                <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
-                <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
-            </ul>
-            <h2>Additional Services</h2>
-            <ul>
-                <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
-                <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
-                <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
-            </ul>
+                    <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
+                    <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
+                </ul>
+                <h2>Additional Services</h2>
+                <ul>
+                    <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
+                    <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
+                    <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
+                </ul>
+            </div>
         </div>
-    </div>
-
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const items = Array.from(carousel.children);
-        let currentAngle = 0;
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentAngle -= 120;
-            carousel.style.transform = `rotateY(${currentAngle}deg)`;
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentAngle += 120;
-            carousel.style.transform = `rotateY(${currentAngle}deg)`;
-        });
-    </script>
-</body>
-</html>
+    
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const items = Array.from(carousel.children);
+            let currentAngle = 0;
+    
+            document.getElementById('next').addEventListener('click', () => {
+                currentAngle -= 120;
+                carousel.style.transform = `rotateY(${currentAngle}deg)`;
+            });
+    
+            document.getElementById('prev').addEventListener('click', () => {
+                currentAngle += 120;
+                carousel.style.transform = `rotateY(${currentAngle}deg)`;
+            });
+        </script>
+    </body>
+    </html>
+    
