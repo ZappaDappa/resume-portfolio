@@ -236,33 +236,32 @@
             <p>Tailored content for corporate and sales presentations, designed to captivate your audience and drive engagement:</p>
             <ul>
                 <li><strong>Sales Kits:</strong> Equip your sales team with all the necessary materials to close deals effectively.</li>
-                    <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
-                    <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
-                </ul>
-                <h2>Additional Services</h2>
-                <ul>
-                    <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
-                    <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
-                    <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
-                </ul>
-            </div>
+                <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
+                <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
+            </ul>
+            <h2>Additional Services</h2>
+            <ul>
+                <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
+                <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
+                <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
+            </ul>
         </div>
-    
-        <script>
-            const carousel = document.querySelector('.carousel');
-            const items = Array.from(carousel.children);
-            let currentAngle = 0;
-    
-            document.getElementById('next').addEventListener('click', () => {
-                currentAngle -= 120;
-                carousel.style.transform = `rotateY(${currentAngle}deg)`;
-            });
-    
-            document.getElementById('prev').addEventListener('click', () => {
-                currentAngle += 120;
-                carousel.style.transform = `rotateY(${currentAngle}deg)`;
-            });
-        </script>
-    </body>
-    </html>
-    
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const items = Array.from(carousel.children);
+        let currentAngle = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentAngle -= 120;
+            carousel.style.transform = `rotateY(${currentAngle}deg)`;
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentAngle += 120;
+            carousel.style.transform = `rotateY(${currentAngle}deg)`;
+        });
+    </script>
+</body>
+</html>
