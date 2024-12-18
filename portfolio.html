@@ -43,52 +43,26 @@
         }
 
         .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
             max-width: 1200px;
             margin: 3rem auto;
             padding: 0 1.5rem;
+            text-align: center;
         }
 
-        .content-text {
-            flex: 2;
-            min-width: 300px;
-            margin-right: 2rem;
-        }
-
-        .content-text h1 {
+        .content-wrapper h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .content-text h2 {
-            font-size: 2rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .content-text p, .content-text ul {
-            margin-bottom: 1rem;
-        }
-
-        .content-text ul {
-            list-style: none;
-            padding-left: 1rem;
-        }
-
-        .content-text ul li::before {
-            content: '\2022';
-            color: #007BFF;
-            font-weight: bold;
-            display: inline-block;
-            width: 1rem;
+        .content-wrapper p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         .carousel-container {
-            flex: 1;
-            max-width: 400px;
             position: relative;
-            margin: auto;
+            max-width: 800px;
+            margin: 0 auto;
             perspective: 1000px;
         }
 
@@ -155,28 +129,13 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-                margin: 1rem auto;
-            }
-
-            .content-text {
-                margin-right: 0;
-            }
-
             .carousel-container {
-                order: 2;
-                margin: 2rem auto; /* Ensures proper spacing */
+                max-width: 90%;
             }
 
-            .content-text h2 {
-                margin-top: 2rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .carousel-container {
-                margin: auto 0; /* Centers vertically on desktop */
+            .carousel-item {
+                width: 150px;
+                height: 225px;
             }
         }
     </style>
@@ -188,17 +147,8 @@
     </div>
 
     <div class="content-wrapper">
-        <div class="content-text">
-            <h1>Content Writing and Technical Documentation Services</h1>
-            <h2>White Papers</h2>
-            <p>White papers are authoritative, detailed documents designed to educate readers and help them make decisions. They are a key resource for establishing expertise, generating leads, and supporting sales efforts. I specialize in creating the following types of white papers:</p>
-            <ul>
-                <li><strong>Technology White Papers:</strong> Explain complex technologies clearly.</li>
-                <li><strong>Industry Trend Analysis:</strong> Highlight current trends, market challenges, and opportunities.</li>
-                <li><strong>Application Papers:</strong> Showcase practical use cases for products or technologies.</li>
-                <li><strong>Planning Guides:</strong> Provide actionable steps to adopt new technologies or adapt to industry changes.</li>
-            </ul>
-        </div>
+        <h1>White Papers</h1>
+        <p>My authored white papers</p>
 
         <div class="carousel-container">
             <div class="carousel">
@@ -219,32 +169,6 @@
                 <button id="prev">&#9664;</button>
                 <button id="next">&#9654;</button>
             </div>
-        </div>
-
-        <div class="content-text">
-            <h2>Marketing Collateral</h2>
-            <p>Marketing collateral supports your business objectives by targeting key audiences with persuasive, informative content. Services include:</p>
-            <ul>
-                <li><strong>Corporate Brochures:</strong> Showcase your company’s vision, mission, and solutions.</li>
-                <li><strong>Product Brochures:</strong> Highlight the benefits and unique features of your products or services.</li>
-                <li><strong>Case Studies/Success Stories:</strong> Demonstrate real-world benefits and implementation of your products or services.</li>
-                <li><strong>FAQs:</strong> Provide clear, concise answers to common customer questions.</li>
-                <li><strong>Newsletters:</strong> Share updates, milestones, and stories to keep audiences engaged.</li>
-                <li><strong>Data Sheets:</strong> Deliver operational and technical specifications for products.</li>
-            </ul>
-            <h2>Presentation and Outreach Materials</h2>
-            <p>Tailored content for corporate and sales presentations, designed to captivate your audience and drive engagement:</p>
-            <ul>
-                <li><strong>Sales Kits:</strong> Equip your sales team with all the necessary materials to close deals effectively.</li>
-                <li><strong>Corporate Presentations:</strong> Help communicate your company’s vision and offerings in a polished, professional format.</li>
-                <li><strong>Direct Mailers:</strong> Reach your audience with compelling invitations or offers.</li>
-            </ul>
-            <h2>Additional Services</h2>
-            <ul>
-                <li><strong>Press Releases:</strong> Announce milestones or achievements to the media effectively.</li>
-                <li><strong>Feature Notes:</strong> Highlight unique product features for marketing purposes.</li>
-                <li><strong>Seminar and Tutorial Content:</strong> Create engaging materials for customer education and lead generation.</li>
-            </ul>
         </div>
     </div>
 
