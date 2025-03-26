@@ -1,183 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Caleb McMillan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 1rem;
-            font-size: 1rem;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100vh;
-        }
-
-        .photo-section {
-            flex: 1;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG'); /* Replace with your photo URL */
-            background-size: cover;
-            background-position: center;
-            min-height: 100%;
-        }
-
-        .content-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        .content-wrapper {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .contact-box {
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #333;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            gap: 1rem;
-        }
-
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s;
-        }
-
-        .social-icons a img:hover {
-            transform: scale(1.2);
-        }
-
-        .footer {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .photo-section {
-                height: 50vh;
-            }
-
-            .navbar {
-                font-size: 0.9rem;
-            }
-
-            .contact-box {
-                max-width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caleb McMillan - About</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-    </div>
+  <header>
+    <h1>Caleb McMillan</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div class="photo-section"></div>
-        <div class="content-section">
-            <div class="content-wrapper">
-                <h1>Caleb McMillan</h1>
-                <p>
-                    <strong> White Paper Author and Marketing Collateral Specialist</strong> 
-                </p>
-                <p>
-                    Hi, I'm Caleb. I'm a content writer and designer specializing in marketing collateral. I'll bring expertise to your project by creating professional white papers, brochures, newsletters, press releases, and other high-impact content.  <br> <br> With over a decade of content writing experience and a formal education in technical writing, I'm well-equipped to help support your business and brand goals. My work combines persuasive writing, clean design, and a strategic focus to captivate readers and inspire action.
-                </p>
-                <div class="contact-box">
-                    <p>
-                        Have a Project in Mind? Let's Talk! 
-                        <a href="mailto:calebmcmillan@gmail.com">calebmcmillan@gmail.com</a>
-                    </p>
-                    <div class="social-icons">
-                        <a href="https://x.com/RealCalebMcM">
-                            <img src="https://i.pinimg.com/736x/99/65/5e/99655e9fe24eb0a7ea38de683cedb735.jpg" alt="Twitter">
-                        </a>
-                        <a href="https://www.linkedin.com/in/calebmcmillan">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+  <main>
+    <h2>White Paper Author & Marketing Collateral Specialist</h2>
+    <p>
+      Hi, I'm Caleb. I'm a content writer and designer specializing in marketing collateral.
+      I bring expertise to your project through professional white papers, brochures, newsletters, press releases,
+      and other high-impact content.
+    </p>
+    <p>
+      With over a decade of content writing experience and a formal education in technical writing, I'm well-equipped
+      to support your business and brand goals. My work combines persuasive writing, clean design, and strategic focus
+      to captivate readers and inspire action.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Lettera_22_2.JPG" alt="Typewriter" width="300">
+  </main>
 
-    <div class="footer">
-        <p></p>
-    </div>
+  <footer>
+    <p>Contact me at <a href="mailto:calebmcmillan@gmail.com">calebmcmillan@gmail.com</a></p>
+    <p>Created from Scratch Using Visual Studio Code</p>
+  </footer>
 </body>
 </html>

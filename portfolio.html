@@ -1,147 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Caleb McMillan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Caleb McMillan</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
 
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
-        }
+    .accordion-header {
+      background-color: #0073e6;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 1rem;
-            font-size: 1rem;
-        }
+    .accordion-header:hover {
+      background-color: #005bb5;
+    }
 
-        .navbar a:hover {
-            text-decoration: underline;
-        }
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background-color: #fff;
+      animation: fadeIn 0.3s ease-in-out;
+    }
 
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            text-align: center;
-        }
+    .accordion-content.show {
+      display: block;
+    }
 
-        .content-wrapper h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+    .thumb-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
 
-        .content-wrapper p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
+    .thumb-item {
+      width: 180px;
+      text-align: center;
+    }
 
-        .image-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
+    .thumb-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
 
-        .image-item {
-            flex: 1 1 calc(50% - 2rem);
-            max-width: 300px;
-        }
+    .thumb-item img:hover {
+      transform: scale(1.05);
+    }
 
-        .image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .image-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .image-item a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .image-item {
-                flex: 1 1 100%;
-                max-width: none;
-            }
-        }
-    </style>
+    .thumb-item a {
+      text-decoration: none;
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-    </div>
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="content-wrapper">
-        <h1>Portfolio</h1>
-        <p>My authored white papers and other marketing collateral</p>
-
-        <div class="image-wrapper">
-            <div class="image-item">
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/moreinksmall.pdf" target="_blank">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/moreinkthumb.png" alt="More Ink Less Think">
-                </a>
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/moreinksmall.pdf" target="_blank">More Ink Less Think: A White Paper for Tattoo Shops and Aritsts (Spec)</a>
-            </div>
-            <div class="image-item">
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Meat%20the%20Future.pdf" target="_blank">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/MeattheFuture.png" alt="Meat the Future">
-                </a>
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Meat%20the%20Future.pdf" target="_blank">Meat the Future (Spec)</a>
-            </div>
-            <div class="image-item">
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/CGC%20White%20Paper%20BC%20Gov%20Submission.pdf" target="_blank">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/1.png" alt="British Columbia Cannabis Stakeholder Submission">
-                </a>
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/CGC%20White%20Paper%20BC%20Gov%20Submission.pdf" target="_blank">British Columbia Cannabis Stakeholder Submission for the Cannabis Growers of Canada</a>
-            </div>
-            <div class="image-item">
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/SolvingAddictionCompletely.png" alt="Solving Addiction Completely">
-                </a>
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">Solving Addiction Completely: A White Paper for Policymakers (Spec)</a>
-            </div>
-            <div class="image-item">
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/OntarioDriver.pdf" target="_blank">
-                    <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/OntDriver.png" alt="Ontario Driver Licences Guidelines">
-                </a>
-                <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/OntarioDriver.pdf" target="_blank">Ontario Drivers Licensing FAQ (Spec)</a>
-            </div>
+  <main>
+    <h2 style="text-align: center; margin-bottom: 1rem;">Portfolio</h2>
+    <div class="accordion">
+      <div class="accordion-item">        <div class="accordion-header" onclick="toggleAccordion(this)">
+          White Papers & Marketing Collateral
         </div>
+        <div class="accordion-content">
+          <div class="thumb-grid">
+            <div class="thumb-item">
+              <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/moreinksmall.pdf" target="_blank">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/moreinkthumb.png" alt="More Ink">
+                More Ink Less Think
+              </a>
+            </div>
+            <div class="thumb-item">
+              <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Meat%20the%20Future.pdf" target="_blank">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/MeattheFuture.png" alt="Meat the Future">
+                Meat the Future
+              </a>
+            </div>
+            <div class="thumb-item">
+              <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/CGC%20White%20Paper%20BC%20Gov%20Submission.pdf" target="_blank">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/1.png" alt="Cannabis">
+                BC Cannabis Submission
+              </a>
+            </div>
+            <div class="thumb-item">
+              <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Caleb%20McMillan%20White%20Paper-1.pdf" target="_blank">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/SolvingAddictionCompletely.png" alt="Solving Addiction">
+                Solving Addiction Completely
+              </a>
+            </div>
+            <div class="thumb-item">
+              <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/OntarioDriver.pdf" target="_blank">
+                <img src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/OntDriver.png" alt="Ontario Driver">
+                Ontario Drivers FAQ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          SEO Blogging
+        </div>
+        <div class="accordion-content">
+          <div class="blog-links">
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-BC%20Court%20Dismisses%20Cannabis%20Retail%20Lawsuit.pdf" target="_blank">BC Court Dismisses Cannabis Retail Lawsuit</a><br>
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-How%20to%20Solve%20the%20Opioid%20Crisis.pdf" target="_blank">How to Solve the Opioid Crisis</a><br>
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-Is%20Tilray%20Too%20Dangerous.pdf" target="_blank">Is Tilray Too Dangerous?</a><br>
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-Journeymen%20Collective%20Magic%20Mushroom%20Retreat.pdf" target="_blank">Journeymen Collective Magic Mushroom Retreat</a><br>
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-Regulating%20Cannabis%20like%20Fish.pdf" target="_blank">Regulating Cannabis Like Fish</a><br>
+  <a href="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/cannabislifenetwork.com-Ted%20Smith%20on%20Cannabis%20in%20Canada.pdf" target="_blank">Ted Smith on Cannabis in Canada</a>
+</div>
+        </div>
+      </div>
     </div>
+  </main>
+
+  <footer>
+    <p>Contact me at <a href="mailto:calebmcmillan@gmail.com">calebmcmillan@gmail.com</a></p>
+    <p>Created from Scratch Using Visual Studio Code</p>
+  </footer>
+
+  <script>
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      content.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
