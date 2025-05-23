@@ -2,8 +2,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #f8f8f8, #e3e3e3);
-  color: #333;
+  background: linear-gradient(to bottom, #fffaf5, #f2e6d9);
+  color: #2b1e12;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -17,7 +17,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* Photo by Beatriz Pérez Moya on Unsplash */
+  /* Photo by ChatGPT */
 }
 
 header h1 {
@@ -56,7 +56,7 @@ nav ul li a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  background: #0073e6;
+  background: #cc6600;
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: bold;
@@ -64,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #003f88;
+  background: #8b3e00;
   transform: scale(1.1) translateY(-3px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -100,14 +100,14 @@ footer {
   text-align: center;
   padding: 15px;
   background-color: #fff;
-  border-top: 2px solid #ddd;
+  border-top: 2px solid #d1b38c;
   margin-top: 30px;
   font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0, 115, 230, 0.5);
+  text-shadow: 1px 1px 5px rgba(204,102,0,0.4);
 }
 
 footer a {
-  color: #0073e6;
+  color: #cc6600;
   text-decoration: none;
 }
 
