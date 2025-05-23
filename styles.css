@@ -114,3 +114,28 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  padding: 1rem;
+}
+
+.thumb-item {
+  text-align: center;
+  max-width: 250px;
+}
+
+.thumb-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+.thumb-item a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
