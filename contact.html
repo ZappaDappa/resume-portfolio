@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Caleb McMillan</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .contact-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .contact-photo {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .contact-flex {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .contact-photo {
+        margin-top: 0;
+        margin-left: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,15 +63,26 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Let's Work Together</h2>
-    <p>If you’re looking for a white paper writer, marketing content creator, or SEO blog contributor — I’d love to hear from you.</p>
-    <p>Reach out by email:</p>
-    <p><strong><a href="mailto:calebmcmillan@gmail.com">calebmcmillan@gmail.com</a></strong></p>
-    <p>Or follow me on social media:</p>
-    <a href="https://www.linkedin.com/in/calebmcmillan" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width:30px; height:30px;">
-    </a>
+  <main class="contact-container">
+    <div class="contact-content">
+      <div class="contact-flex">
+        <div class="contact-text">
+          <h2>Let’s Collaborate</h2>
+          <p>Whether you need sharp writing, bold strategy, or boots-on-the-ground creativity, I can help you tell the right story to the right audience.</p>
+          <p>Let’s connect:</p>
+          <p><strong><a href="mailto:calebmcmillan@gmail.com">calebmcmillan@gmail.com</a></strong></p>
+          <p>Or find me here:</p>
+          <a href="https://www.linkedin.com/in/calebmcmillan" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width:30px; height:30px;">
+          </a>
+        </div>
+        <img
+          class="contact-photo"
+          src="https://raw.githubusercontent.com/ZappaDappa/website-assets/main/Caleb.jpg"
+          alt="Caleb McMillan Portrait"
+        />
+      </div>
+    </div>
   </main>
 
   <footer>
