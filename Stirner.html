@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Stirner: The Unique and Its Property - An Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F2F5;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #FC913A;
+            line-height: 1;
+        }
+        .pyramid-level {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="text-[#333745]">
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FF4E50] to-[#FC913A] mb-2">The Unique and Its Property</h1>
+            <p class="text-xl md:text-2xl font-bold text-[#333745]">An Infographic on the Philosophy of Max Stirner</p>
+            <p class="mt-4 text-2xl md:text-4xl font-extrabold p-4 rounded-lg shadow-inner bg-white max-w-4xl mx-auto">"I have based my affair on nothing."</p>
+        </header>
+
+        <main class="space-y-12">
+            <section class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">Reclaiming Stirner: A Necessary Retranslation</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto text-center">For over a century, the English-speaking world knew Stirner's work as "The Ego and His Own." The 1907 translation by Steven T. Byington framed the work in abstract psychological terms, missing the author's concrete, aggressive, and playful style. Wolfi Landstreicher's 2017 translation, "The Unique and Its Property," restores the original's confrontational spirit and philosophical precision.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="border-4 border-[#FF4E50] p-6 rounded-lg bg-red-50">
+                        <h3 class="text-2xl font-bold mb-2 text-center">Byington (1907) - The Ego and His Own</h3>
+                        <ul class="list-disc list-inside space-y-2 text-left">
+                            <li>Frames the individual as an abstract "Ego."</li>
+                            <li>Softens the aggressive, provocative tone for a Victorian audience.</li>
+                            <li>Imposes a systematic structure on an unsystematic work.</li>
+                            <li>Misses the humor and "playful ferocity."</li>
+                        </ul>
+                    </div>
+                    <div class="border-4 border-[#FC913A] p-6 rounded-lg bg-orange-50">
+                        <h3 class="text-2xl font-bold mb-2 text-center">Landstreicher (2017) - The Unique and Its Property</h3>
+                        <ul class="list-disc list-inside space-y-2 text-left">
+                            <li>Restores "The Unique," the concrete, living individual.</li>
+                            <li>Captures the original crude, humorous, and biting style.</li>
+                            <li>Respects the work as a personal provocation, not a formal system.</li>
+                            <li>Highlights Stirner's critique of all abstractions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-xl p-6 md:p-8 md:col-span-2">
+                <h2 class="text-3xl font-bold text-center mb-6">The War on "Spooks"</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto text-center">Stirner's central project is the demolition of "spooks" or "fixed ideas"—abstract concepts that humanity creates and then allows to dominate individual lives. These concepts, from God to the State to Morality, demand sacrifice and obedience, haunting the very individuals who invented them.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-xl font-bold mb-4 text-center">The "Unique One" is haunted by fixed ideas that demand devotion:</p>
+                        <div class="relative flex justify-center items-center h-80">
+                            <div class="absolute text-7xl z-10" title="The Unique">👤</div>
+                            <div class="absolute top-0 transform -translate-y-4 text-center">
+                                <span class="text-2xl font-bold text-[#FF4E50]">God 🙏</span>
+                            </div>
+                            <div class="absolute top-1/4 left-0 transform -translate-x-8 text-center">
+                                <span class="text-2xl font-bold text-[#FF4E50]">The State 🏛️</span>
+                            </div>
+                            <div class="absolute top-1/4 right-0 transform translate-x-8 text-center">
+                                 <span class="text-2xl font-bold text-[#FF4E50]">Law ⚖️</span>
+                            </div>
+                            <div class="absolute bottom-1/4 left-0 transform -translate-x-4 text-center">
+                                 <span class="text-2xl font-bold text-[#FF4E50]">Morality 📜</span>
+                            </div>
+                             <div class="absolute bottom-1/4 right-0 transform translate-x-4 text-center">
+                                 <span class="text-2xl font-bold text-[#FF4E50]">Humanity 👨‍👩‍👧‍👦</span>
+                            </div>
+                            <div class="absolute bottom-0 transform translate-y-4 text-center">
+                                <span class="text-2xl font-bold text-[#FF4E50]">Truth ✨</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg mb-4">This chart visualizes the immense power that society invests in these abstract "spooks." For Stirner, the actual value of these fixed ideas to the concrete, unique individual is nothing—they are chains to be broken, not ideals to be served. The goal is to dissolve them and reclaim one's own power.</p>
+                        <div class="chart-container">
+                            <canvas id="spooksChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">Ownness vs. Freedom: Reclaiming Sovereignty</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto text-center">Stirner rejects the common idea of "freedom," seeing it as a conditional gift from a higher power (like a state granting rights). He proposes "Ownness" as the true form of liberation: the absolute, internal sovereignty of the individual over their own mind and body, independent of any external authority.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div class="bg-red-50 p-6 rounded-lg border-2 border-[#FF4E50]">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Freedom (A Spook)</h3>
+                        <div class="space-y-4 text-center">
+                            <div class="p-3 bg-white rounded-lg shadow">Granted by an external power (State, God)</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Can be revoked or limited</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Implies a "freedom from" something</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Keeps the individual dependent on the grantor</div>
+                        </div>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg border-2 border-[#FC913A]">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Ownness (My Power)</h3>
+                        <div class="space-y-4 text-center">
+                            <div class="p-3 bg-white rounded-lg shadow">Inherent to the unique individual</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Is absolute and self-determined</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Is the power "to do" as I will</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="p-3 bg-white rounded-lg shadow">Makes the individual their own sovereign master</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">Models of Association: The State vs. The Union of Egoists</h2>
+                <p class="text-lg mb-8 max-w-3xl mx-auto text-center">Stirner critiques compulsory social structures like the State and Society, which demand the individual's submission. He contrasts this with the "Union of Egoists," a voluntary, temporary, and tool-like association created by individuals purely for their mutual benefit, which can be dissolved at any time.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center p-4">
+                        <h3 class="text-2xl font-bold mb-4">The State / Society (A Spook)</h3>
+                        <div class="relative w-full h-64 flex flex-col items-center justify-end">
+                             <div class="w-2/5 h-1/4 bg-[#FF4E50] flex items-center justify-center text-white font-bold rounded-t-lg">Authority</div>
+                             <div class="w-3/5 h-1/4 bg-[#FF4E50]/80 flex items-center justify-center text-white font-bold">Institutions</div>
+                             <div class="w-4/5 h-1/4 bg-[#FF4E50]/60 flex items-center justify-center text-white font-bold">Laws / Norms</div>
+                             <div class="w-full h-1/4 bg-[#FF4E50]/40 flex items-center justify-center text-white font-bold">The Individual (Subjugated)</div>
+                        </div>
+                        <p class="mt-4 font-semibold">A rigid hierarchy that stands above the individual.</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <h3 class="text-2xl font-bold mb-4">The Union of Egoists (A Tool)</h3>
+                         <div class="relative w-full h-64 flex items-center justify-center">
+                            <div class="absolute w-16 h-16 bg-[#FC913A] rounded-full flex items-center justify-center font-bold text-white transform translate-x-[-50px] translate-y-[-50px]">You</div>
+                            <div class="absolute w-16 h-16 bg-[#FC913A] rounded-full flex items-center justify-center font-bold text-white transform translate-x-[50px] translate-y-[-50px]">Me</div>
+                            <div class="absolute w-16 h-16 bg-[#FC913A] rounded-full flex items-center justify-center font-bold text-white transform translate-x-[-50px] translate-y-[50px]">Them</div>
+                            <div class="absolute w-16 h-16 bg-[#FC913A] rounded-full flex items-center justify-center font-bold text-white transform translate-x-[50px] translate-y-[50px]">Us</div>
+                             <div class="absolute w-full h-px bg-[#F9D423] transform rotate-45"></div>
+                             <div class="absolute w-full h-px bg-[#F9D423] transform -rotate-45"></div>
+                             <div class="absolute w-px h-full bg-[#F9D423]"></div>
+                             <div class="absolute w-full h-px bg-[#F9D423]"></div>
+                        </div>
+                        <p class="mt-4 font-semibold">A fluid, voluntary network created and controlled by individuals.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function processLabel(label) {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const ctx = document.getElementById('spooksChart').getContext('2d');
+        const spooksChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["The State", "Morality", "Law", "Humanity", "God", "Truth"].map(processLabel),
+                datasets: [{
+                    label: 'Societal Power Invested in "Spooks"',
+                    data: [90, 85, 80, 75, 70, 95],
+                    backgroundColor: [
+                        'rgba(255, 78, 80, 0.6)',
+                        'rgba(252, 145, 58, 0.6)',
+                        'rgba(249, 212, 35, 0.6)',
+                        'rgba(255, 78, 80, 0.6)',
+                        'rgba(252, 145, 58, 0.6)',
+                        'rgba(249, 212, 35, 0.6)'
+                    ],
+                    borderColor: [
+                        '#FF4E50',
+                        '#FC913A',
+                        '#F9D423',
+                        '#FF4E50',
+                        '#FC913A',
+                        '#F9D423'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Power Over the Individual',
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Living City: An Infographic on Jane Jacobs's Urban Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #444E86;
+            transform: translateY(1rem);
+        }
+    </style>
+</head>
+<body class="text-[#003F5C]">
+
+    <header class="bg-[#003F5C] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight">The Living City</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Visualizing the Urban Principles of Jane Jacobs</p>
+        <blockquote class="mt-8 text-base md:text-lg italic border-l-4 border-[#FFA600] pl-4 max-w-2xl mx-auto">
+            "Cities have the capability of providing something for everybody, only because, and only when, they are created by everybody."
+        </blockquote>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="flawed-vision" class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">The Flawed Vision: The "Radiant Garden City"</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Jane Jacobs critiqued mid-20th-century urban planning for its rigid, top-down approach. This model, which she termed the "Radiant Garden City," was based on segregating uses and creating sterile, monotonous super-blocks. This approach, she argued, resulted in lifeless, unsafe, and ultimately failed urban spaces.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold mb-4 text-[#DD5182]">The Radiant City Model</h3>
+                        <div class="p-4 border-2 border-dashed border-gray-300 bg-gray-50 rounded-lg h-48 flex items-center justify-center">
+                            <div class="w-full h-full bg-green-200 flex items-center justify-around p-2">
+                                <div class="w-16 h-24 bg-gray-400 rounded-sm flex items-center justify-center text-white text-sm">Res.</div>
+                                <div class="w-16 h-24 bg-gray-400 rounded-sm flex items-center justify-center text-white text-sm">Res.</div>
+                                <div class="w-16 h-24 bg-gray-400 rounded-sm flex items-center justify-center text-white text-sm">Res.</div>
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Isolated uses, vast empty space, and minimal street life.</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold mb-4 text-[#FFA600]">The Living City Grid</h3>
+                        <div class="p-4 border-2 border-dashed border-gray-300 bg-gray-50 rounded-lg h-48 flex flex-col justify-between">
+                             <div class="flex justify-between h-1/3">
+                                <div class="w-[30%] bg-blue-300 rounded-sm flex items-center justify-center text-white text-xs">Res.</div>
+                                <div class="w-[30%] bg-red-300 rounded-sm flex items-center justify-center text-white text-xs">Shop</div>
+                                <div class="w-[30%] bg-purple-300 rounded-sm flex items-center justify-center text-white text-xs">Office</div>
+                            </div>
+                             <div class="flex justify-between h-1/3">
+                                <div class="w-[30%] bg-red-300 rounded-sm flex items-center justify-center text-white text-xs">Shop</div>
+                                <div class="w-[30%] bg-blue-300 rounded-sm flex items-center justify-center text-white text-xs">Res.</div>
+                                <div class="w-[30%] bg-blue-300 rounded-sm flex items-center justify-center text-white text-xs">Res.</div>
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-600">Integrated uses on short, walkable blocks create vibrant street life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="four-pillars" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">The Four Pillars of a Living City</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">1. Mixed Primary Uses</h3>
+                    <p class="text-sm mb-4">A healthy district must combine different primary functions like residences, workplaces, and cultural institutions. This ensures a continuous flow of people with different schedules, creating constant, natural surveillance and economic symbiosis.</p>
+                    <div class="chart-container">
+                        <canvas id="mixedUsesChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">2. Short Blocks</h3>
+                    <p class="text-sm mb-4">Frequent streets and opportunities to turn corners are essential. They create permeable, walkable neighborhoods, increase economic cross-use, and foster more casual public encounters, which are the bedrock of a safe and sociable community.</p>
+                    <div class="chart-container">
+                        <canvas id="shortBlocksChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">3. Aged Buildings</h3>
+                    <p class="text-sm mb-4">A mix of building ages is crucial for economic diversity. Old, low-rent buildings are incubators for new ideas, small businesses, and startups that cannot afford the high overhead of new construction. This mix creates both economic and visual richness.</p>
+                    <div class="chart-container">
+                        <canvas id="agedBuildingsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">4. Dense Concentration</h3>
+                    <p class="text-sm mb-4">Cities need a dense concentration of people to support a wide variety of enterprises and amenities. High density, when combined with the other three conditions, creates the vitality, excitement, and economic opportunities that are the hallmark of a successful city.</p>
+                    <div class="chart-container">
+                        <canvas id="densityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sidewalk-ballet" class="mb-16">
+             <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">The Heart of the City: The Sidewalk Ballet</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">For Jacobs, the sidewalk is the city's most vital organ. It's where the intricate "ballet" of public life unfolds. This constant, casual interaction between residents, shopkeepers, and strangers is what makes a street safe, sociable, and alive. The key is the principle of <span class="font-bold text-[#DD5182]">"Eyes on the Street."</span></p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+                    <div class="p-4 rounded-lg bg-gray-100">
+                        <p class="text-lg font-bold">Eyes on the Street</p>
+                        <p class="text-sm">Natural surveillance from windows and storefronts.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#8680;</div>
+                    <div class="p-4 rounded-lg bg-gray-100">
+                        <p class="text-lg font-bold">Increased Safety</p>
+                        <p class="text-sm">Discourages crime and encourages responsible behavior.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#8680;</div>
+                    <div class="p-4 rounded-lg bg-gray-100">
+                        <p class="text-lg font-bold">More Public Use</p>
+                        <p class="text-sm">People feel comfortable using the sidewalks day and night.</p>
+                    </div>
+                    <div class="flowchart-arrow">&#8680;</div>
+                     <div class="p-4 rounded-lg bg-gray-100">
+                        <p class="text-lg font-bold">More Eyes</p>
+                        <p class="text-sm">A self-reinforcing cycle of vitality begins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wilderness-city">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">Case Study: A Jacobsian City in the Canadian Wilderness</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">If building a city from scratch, Jacobs would argue against suburban sprawl that devours nature. Instead, she would advocate for a compact, dense urban core that preserves the surrounding wilderness by creating a sharp, clear border between city and nature.</p>
+                <div class="chart-container h-96 md:h-[500px] max-h-[500px]">
+                    <canvas id="wildernessChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 bg-gray-200 mt-16">
+        <p class="text-sm text-gray-600">This infographic is based on the principles outlined in "The Death and Life of Great American Cities" by Jane Jacobs.</p>
+        <p class="text-xs text-gray-500 mt-2">Crafted by Canvas Infographics.</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = ['#003F5C', '#955196', '#FF6E54', '#444E86', '#DD5182', '#FFA600'];
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const defaultChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        function wrapLabel(label) {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        new Chart(document.getElementById('mixedUsesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Residences', 'Workplaces', 'Retail/Dining', 'Cultural & Public'],
+                datasets: [{
+                    label: 'District Uses',
+                    data: [40, 25, 20, 15],
+                    backgroundColor: brilliantBlues,
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: defaultChartOptions
+        });
+
+        new Chart(document.getElementById('shortBlocksChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Long Blocks', 'Short Blocks'],
+                datasets: [{
+                    label: 'Opportunities for Interaction',
+                    data: [30, 95],
+                    backgroundColor: [brilliantBlues[4], brilliantBlues[5]],
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('agedBuildingsChart'), {
+            type: 'pie',
+            data: {
+                labels: ['New (<10 yrs)', wrapLabel('Mid-Century (10-40 yrs)'), 'Historic (40-80 yrs)', 'Landmark (80+ yrs)'],
+                datasets: [{
+                    label: 'Building Ages',
+                    data: [20, 35, 30, 15],
+                    backgroundColor: brilliantBlues,
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: defaultChartOptions
+        });
+
+        new Chart(document.getElementById('densityChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Suburban', wrapLabel('"In-Between" Density'), 'Jacobsian Urban'],
+                datasets: [{
+                    label: 'Public Life & Vitality',
+                    data: [15, 40, 90],
+                    backgroundColor: [brilliantBlues[1], brilliantBlues[3], brilliantBlues[0]],
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('wildernessChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Suburban Sprawl Approach', 'Jacobsian Core Approach'],
+                datasets: [
+                    {
+                        label: 'Dense Urban Core',
+                        data: [0, 10],
+                        backgroundColor: brilliantBlues[0]
+                    },
+                    {
+                        label: 'Low-Density Housing',
+                        data: [60, 0],
+                        backgroundColor: brilliantBlues[2]
+                    },
+                    {
+                        label: 'Roads & Parking',
+                        data: [25, 2],
+                        backgroundColor: brilliantBlues[3]
+                    },
+                     {
+                        label: 'Preserved Wilderness',
+                        data: [15, 88],
+                        backgroundColor: '#2E8B57'
+                    }
+                ]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                           callback: function(value) {
+                                return value + "%"
+                           }
+                        }
+                    },
+                    y: {
+                        stacked: true
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    label += context.parsed.x + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
